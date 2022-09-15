@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Museos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let museo of museos" (click)="buscarRecorridos(museo.id)">
+    <img src= {{museo.imagen}} />
+    <ion-card-header>
+      <ion-card-title>{{museo.nombre}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>{{museo.descipcion}}</ion-card-content>
+  </ion-card>
+</ion-content>
